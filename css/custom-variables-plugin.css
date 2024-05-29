@@ -1,0 +1,115 @@
+.cv-wrap h2{
+	font-size:2rem;
+	line-height: 1.5;
+	margin-bottom:0.5em;
+}
+
+.cv-wrap p{
+	font-size:1rem;
+	line-height: 1.5;
+}
+
+#global-variables-container{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom:10px;
+}
+
+#global-variables-container .global-variable:first-child{
+	background: #1c1c1c;
+	padding: 5px;
+	color: #fff;
+	border-radius: 4px;
+	overflow: clip;
+	border: none;
+}
+
+
+.global-variable{
+	display: flex;
+	gap: 10px;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.global-variable:only-child{
+	display: none;
+}
+
+.global-variable label{
+	width: 120px;
+	padding-left: 10px;
+	font-size: 1rem;
+	letter-spacing: 0.5px;
+}
+
+.cv-wrap .form-table th{
+	display:none;
+}
+
+.cv-wrap .form-table td{
+	padding:0;
+}
+
+.cv-wrap input, .cv-wrap select{
+	padding:3px 10px;
+	border-color:#ccc;
+	width:130px;
+}
+.cv-wrap input.button-primary{
+	width: auto;
+	font-size: 1rem;
+	letter-spacing: 0.5px;
+	margin-top:2rem;
+}
+
+.cv-wrap input[readonly]{
+	opacity: 0.5;
+}
+
+.cv-wrap button.remove-variable, .cv-wrap button.copy-shortcode{
+	border: none;
+	color: #fff;
+	fill:#fff;
+	font-weight: 600;
+	border-radius: 100%;
+	width: 36px;
+	cursor: pointer;
+	transform: scale(0.75);
+	line-height: 0;
+	font-size: 1rem;
+	aspect-ratio:1 / 1;
+}
+
+.cv-wrap button.remove-variable{
+	background: #ed0000;
+}
+
+.cv-wrap button.copy-shortcode{
+	background: #0050a9;
+}
+
+.cv-wrap button.remove-variable svg {
+	width:0.85em;
+}
+
+.cv-wrap button.copy-shortcode svg{
+	width:1.25em;
+}
+
+@media screen and (max-width: 782px){
+	.global-variable{
+		flex-wrap:wrap;
+		border-bottom:none;
+	}
+	
+	#global-variables-container{
+		gap:2rem;
+		margin-bottom:2rem;
+	}
+	
+	#global-variables-container .global-variable:first-child{
+		display:none;
+	}
+}
