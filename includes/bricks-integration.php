@@ -10,7 +10,7 @@ function add_custom_variable_tags_to_builder($tags) {
 
     foreach ($global_variables as $variable) {
         $tags[] = [
-            'name'  => '{gb_' . sanitize_title($variable['label']).'}',
+            'name'  => '{gvar_' . sanitize_title($variable['label']).'}',
             'label' => $variable['label'],
             'group' => 'Global Variables',
         ];
@@ -25,7 +25,7 @@ function render_custom_variable_tags($tag, $post, $context = 'text') {
     $global_variables = get_option('global_variables', []);
 
     foreach ($global_variables as $variable) {
-        $tag_name = '{gb_' . sanitize_title($variable['label']).'}';
+        $tag_name = '{gvar_' . sanitize_title($variable['label']).'}';
         
         if ($tag === $tag_name) {
             return $variable['value'];
@@ -42,7 +42,7 @@ function render_custom_variable_in_content($content, $post, $context = 'text') {
     $global_variables = get_option('global_variables', []);
 
     foreach ($global_variables as $variable) {
-        $tag = '{gb_' . sanitize_title($variable['label']) . '}';
+        $tag = '{gvar_' . sanitize_title($variable['label']) . '}';
         $value = $variable['value'];
 
         $content = str_replace($tag, $value, $content);
