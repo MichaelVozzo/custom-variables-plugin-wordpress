@@ -2,7 +2,7 @@
 /*
 Plugin Name: Custom Variables Plugin
 Description: A custom plugin for global variables.
-Version: 1.3
+Version: 1.3.1
 Author: EDynam Team
 */
 
