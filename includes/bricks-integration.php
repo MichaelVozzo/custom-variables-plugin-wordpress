@@ -8,6 +8,10 @@ add_filter('bricks/dynamic_tags_list', 'add_custom_variable_tags_to_builder');
 function add_custom_variable_tags_to_builder($tags) {
     $global_variables = get_option('global_variables', []);
 
+    if (!is_array($global_variables)) {
+        $global_variables = [];
+    }
+
     foreach ($global_variables as $variable) {
         $tags[] = [
             'name'  => '{gvar_' . sanitize_title($variable['label']).'}',
@@ -23,6 +27,10 @@ function add_custom_variable_tags_to_builder($tags) {
 add_filter('bricks/dynamic_data/render_tag', 'render_custom_variable_tags', 10, 3);
 function render_custom_variable_tags($tag, $post, $context = 'text') {
     $global_variables = get_option('global_variables', []);
+
+    if (!is_array($global_variables)) {
+        $global_variables = [];
+    }
 
     foreach ($global_variables as $variable) {
         $tag_name = '{gvar_' . sanitize_title($variable['label']).'}';
@@ -40,6 +48,10 @@ add_filter('bricks/dynamic_data/render_content', 'render_custom_variable_in_cont
 add_filter('bricks/frontend/render_data', 'render_custom_variable_in_content', 10, 2);
 function render_custom_variable_in_content($content, $post, $context = 'text') {
     $global_variables = get_option('global_variables', []);
+
+    if (!is_array($global_variables)) {
+        $global_variables = [];
+    }
 
     foreach ($global_variables as $variable) {
         $tag = '{gvar_' . sanitize_title($variable['label']) . '}';
