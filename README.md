@@ -1,5 +1,11 @@
 # custom-variables-plugin-wordpress
-A simple plugin to create global custom variables in Wordpress.
+A simple plugin to create global custom variables in Wordpress. Add your custom variables to pages/post or Gutenberg via shortcodes.
+This plugin also directly integrates with Elementor (Dynamic Tags) and Bricks (Dynamic Content).
+
+Version 1.4
+- Back-end interface style changes.
+- Form validation for checking data types, (url) and (email).
+- Toast-style notifcations added for copying a shortcode.
 
 Versions 1.3.1
 - Fixed PHP error in Bricks when no variables were created.
