@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Custom Variables Plugin
-Description: A custom plugin for global variables.
-Version: 1.3.1
+Description: A custom plugin for creating global variables. Insert variables into any content via shortcode tags. The plugin is also directly integrated for use with Elementor (dynamic tags) and Bricks (dynamic data).
+Version: 1.4
 Author: EDynam Team
 */
 
